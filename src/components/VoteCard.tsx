@@ -78,11 +78,7 @@ export default function VoteCard({ isAdmin }: { isAdmin: boolean }) {
             <h3 className="font-black text-gray-800 dark:text-zinc-100 text-lg uppercase tracking-tight">{c.name}</h3>
             
             {/* LOGIKA HIDE: Hanya muncul jika isAdmin true */}
-            {isAdmin && (
-              <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mt-1">
-                {Number(c.voteCount)} Suara
-              </p>
-            )}
+            
           </div>
           <button 
             onClick={() => openModal(i)} 
