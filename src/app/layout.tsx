@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     url: METADATA.homeUrl,
     siteName: METADATA.name
   },
-};
+  other: {
+    "talentapp:project_verification": "3281d04b5f905ee798ae63a2862d9f34177c0df0c9dfa027877e8eab344d68b0211244761c8f0c832fdc10093723db0e3e4244cc99bc4f37caa6dc144c88ae96"
+  }
+  };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

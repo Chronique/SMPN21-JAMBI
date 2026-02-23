@@ -2,6 +2,7 @@
 import { Metadata } from "next";
 import App from "./app";
 import { METADATA } from "~/lib/utils";
+import { Attribution } from "ox/erc8021";
 
 const frame = {
   version: "next",
@@ -18,6 +19,8 @@ const frame = {
   }
 };
 
+const DATA_SUFFIX = Attribution.toDataSuffix({ codes: ["bc_vghq983e"] });
+
 export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -33,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "fc:frame": JSON.stringify(frame),
       "fc:miniapp": JSON.stringify(frame),
-      // MASUKKAN KODE BASE DEV DI SINI
+      "base_builder": "bc_vghq983e",
       "base:app_id": "695b6e784d3a403912ed8de8",
     }
   };
